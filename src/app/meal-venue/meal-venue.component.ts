@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MealVenueComponent implements OnInit {
 
-  constructor() { }
+  day: number;
+  venue: string;
+
+  constructor() {
+      this.day = null
+      this.venue = null
+  }
+
+  getDailyVenue() {
+    return "Today!"
+  };
 
   ngOnInit() {
+      this.venue = this.getDailyVenue()
   }
 
 }
